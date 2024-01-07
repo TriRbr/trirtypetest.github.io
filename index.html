@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"/>
+    <!-- Stylesheet -->
+   
+  </head>
+  <body>
+ <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #00BFFF;
+}
+.container {
+  
+  width: 80vmin;
+  padding: 50px 30px;
+  background-color:black;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left: 50%;
+  border-radius: 15px;
+  border:3px solid white;
+}
+.stats {
+  text-align: right;
+  font-size: 15px;
+  position: relative;
+  bottom:30px;
+  color: MediumAquamarine
+}
+.stats span {
+  font-weight: 400;
+}
+#quote {
+  text-align: justify;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: LightBlue;
+  position: relative;
+  bottom:10px;
+  font-size: 16px
+}
+#input {
+  position: relative;
+  justify-content: center;
+  width:250px;
+}
+button {
+  
+  margin-top: 30px;
+  background-color:Indigo;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 18px;
+  
+}
+.result {
+  margin-top: 40px;
+  display: none;
+}
+.result h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.wrapper span {
+  font-weight: 600;
+}
+.success {
+  color: #44b267;
+}
+.fail {
+  color: #e81c4e;
+}
+
+.green{
+  color: #00FFFF;
+  border-bottom:2px solid;
+}
+
+.red{
+  color:red;
+  border-bottom:2px solid red;
+}
+.blue{
+  color: LightBlue;
+  
+}
+
+#start{
+  position: relative;
+  left:75px;
+}
+#main{
+  opacity: 0;
+}
+</style>
+    <div id="need"></div>
+    <input id="main" type="text">
+    <div class="container">
+      <div class="stats">
+        <p>WPM: <span id="wpm">0</span></p>
+        <p>CPM: <span id="cpm">0</span></p>
+        <p>Mistakes: <span id="mistakes">0</span></p>
+        <p>Time: <span id="scr">60s</span></p>
+      </div>
+      <div id="quote"></div>
+  
+        
+      
+      <button
+        id="input"
+        
+      >Activate Keyboard</button>
+      
+        <button id="start">Start</button>
+        
+      
+
+    </div>
+
+
+<script>
+      
+
+let pass = ["Artificial Intelligence (AI) has revolutionized various industries, utilizing algorithms and data to simulate human intelligence. From predictive analytics to autonomous vehicles, AI's applications are vast and diverse.","Literature serves as a timeless reflection of human experiences, emotions, and ideas. Through storytelling, poetry, drama, and various literary forms, it captures the essence of life, offering insights into diverse cultures, historical periods, and the human condition itself.","Storytelling, the oldest form of literature, transcends generations, conveying morals, beliefs, and societal values. It provides an avenue for escapism, allowing readers to explore new worlds and perspectives.","Poetry, with its rhythmic language and evocative imagery, encapsulates emotions in concise yet powerful ways. Poets craft verses that delve into the depths of human emotions and experiences.","Financial institutions utilize AI algorithms to detect fraudulent activities, personalize customer experiences, and optimize trading strategies. These technologies analyze vast amounts of data, enabling better decision-making and risk management.","Additionally, AI's role in shaping our social interactions is n,oteworthy. Social media platforms leve,rage AI algorithms to curate content, personalize feeds, and target advertisements, influencing user behavior and opinions.","Algorithms like Shor's and Grover's play crucial roles in harnessing quantum superiority. Shor's algorithm efficiently factors large numbers, threatening current encryption methods, while Grover's algorithm speeds up unstructured search problems quadratically.","Sarah walked through the bustling streets, enveloped by the city's vibrant energy. The aroma of freshly brewed coffee wafted from nearby cafes, mingling with the scent of blooming flowers from a street vendor's cart.","In a bustling market, vendors proudly displayed their goods, their voices blending into a symphony of sales pitches. The vibrant colors of fruits, spices, and textiles adorned the stalls, enticing passersby.","Environmental conservation is imperative in combating climate change. Sustainable practices, renewable energy sources, and conservation efforts are vital to preserving our planet for future generations. Every individual's actions collectively impact the environment."]
+
+
+
+let h
+let l = 0
+let a = 0
+let c = 0
+//let d = -1
+let ll
+let v = 60
+let pp
+let p = ""
+let wp
+let j =()=>{
+  main.focus()
+}
+
+let g = () => {
+  start.hidden = true
+  let d = Math.floor(Math.random() * 10);
+  for (let i of pass[d]) {
+    let u = document.createElement("span")
+    u.textContent = i
+    u.classList.add("hey")
+    need.append(u)
+    
+  }
+  
+  quote.innerHTML = need.innerHTML
+  need.innerHTML = ""
+  
+  main.value = ""
+  mistakes.textContent = 0
+  start.removeEventListener("click", g)
+  scr.textContent = "60s"
+  v=60
+  main.value = ""
+  wpm.textContent = 0
+  cpm.textContent = 0
+  p = main.value
+  hi.time()
+  hi.keychecker()
+  
+}
+
+let x = (e) => {
+
+
+
+  let bro = document.querySelectorAll(".hey")
+  let br = Array.from(bro)
+  p = main.value //p=h,p=hf,p=hf,p=hf_,p=hf
+  if(p == ll){//ll=un//ll=h,ll=hf,ll=hf,ll=hf_
+    
+    
+  }
+  else if(p != ll){//ll=un//ll=h
+    if (p.length < l) { //l=un,l=1,l=2,l=3
+      console.log(bro[p.length].className)
+      if (bro[p.length].classList.contains("red") == true) {
+        c--
+        mistakes.textContent = c
+      }
+      a--
+      bro[p.length].classList.add("blue")
+      bro[p.length].classList.remove("green")
+      bro[p.length].classList.remove("red")
+      l=p.length
+    }
+    else if (bro[p.length - 1].textContent == p[p.length - 1]) {
+    
+      a++
+      bro[p.length - 1].classList.add("green")
+      
+      bro[p.length - 1].classList.remove("blue")
+      bro[p.length - 1].classList.remove("red")
+      l = p.length//l=1,l=3
+    }
+    
+    else if (bro[p.length - 1].textContent != p[p.length - 1]) {
+      c++
+      mistakes.textContent = c
+      a++
+      bro[p.length - 1].classList.add("red")
+      bro[p.length - 1].classList.remove("blue")
+      bro[p.length - 1].classList.remove("green")
+      l = p.length
+    }
+  
+    ll = p
+    //let wp = Math.round(((p.length- mistakes.textContent) / 5) / (60 - v) * 60);
+    console.log(v)
+    
+    
+   
+    
+    if(a == bro.length){
+      hi.mistake()
+    }
+    
+  }
+  
+
+}
+
+
+class typing{
+keychecker(){
+  main.addEventListener("input",x)
+}
+start(){
+  
+  start.addEventListener("click",g)
+  input.addEventListener("click",j)
+  
+    
+}
+mistake(){
+  start.hidden = false
+  main.removeEventListener("input", x)
+  
+  input.removeEventListener("click", j)
+  c = 0
+  l = 0
+  a=0
+  //wp = 0
+  
+  start.textContent = "Next"
+  clearInterval(pp)
+  hi.start()
+}
+
+time(){
+    pp = setInterval((e)=>{
+    console.log(main.value)
+    v--
+    scr.textContent = `${v}s`
+    wp = Math.round((((p.length) / 5) - mistakes.textContent) / (60 - v) * 60);
+    wp = wp < 0 || !wp || wp === Infinity ? 0 : wp
+    
+    wpm.textContent = wp
+    
+    cpm.textContent = p.length - mistakes.textContent;
+    if (v == 0) {
+      hi.mistake()
+    }
+  },1000)
+}
+
+}
+
+let hi = new typing()
+hi.start()
+
+
+</script>
+  </body>
+</html>
